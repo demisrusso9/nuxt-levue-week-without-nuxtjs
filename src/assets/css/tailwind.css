@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply flex justify-center items-center w-full p-6 mt-8 rounded-md font-semibold transition-colors;
+  }
+
+  .button.completed {
+    @apply bg-white text-gray-500 border-b-2 border-green-400 cursor-not-allowed h-20;
+  }
+
+  .button.abandon {
+    @apply bg-white text-gray-500 hover:bg-red-400 hover:text-white h-20;
+  }
+
+  .button.start {
+    @apply bg-blue-600 text-white hover:bg-blue-700 h-20;
+  }
+
+  .button.failed {
+    @apply bg-red-400 text-white hover:bg-red-800 h-3 w-1/2;
+  }
+
+  .button.succeeded {
+    @apply bg-green-400 text-white hover:bg-green-800 h-3 w-1/2;
+  }
+}
